@@ -19,35 +19,36 @@ const example = {
 
 // Write your intern objects here:
 
-const Mitzi = {
+const mitzi = {
   "id": 1,
   "name": "Mitzi",
   "email": "mmelloy0@psu.edu",
   "gender": "F"
 };
 
-const Kennan = {
+const kennan = {
   "id": 2,
   "name": "Kennan",
   "email": "kdiben1@tinypic.com",
   "gender": "M"
+
 };
 
-const Keven = {
+const keven = {
   "id": 3,
   "name": "Keven",
   "email": "kmummery2@wikimedia",
   "gender": "M"
 };
 
-const Gannie = {
+const gannie = {
   "id": 4,
   "name": "Gannie",
   "email": "gmartinson3@illinois.edu",
   "gender": "M"
 };
 
-const Antonietta = {
+const antonietta = {
   "id": 5,
   "name": "Antonietta",
   "email": "adaine5@samsung.com",
@@ -59,26 +60,37 @@ const Antonietta = {
 // Once your objects are created, log out the following requests from HR into the console:
 
 // Mitzi's name
-console.log(Object.values(Mitzi)[1]);
+console.log(Object.values(mitzi)[1]);
 
 // Kennan's ID
-console.log(Object.values(Kennan)[0]);
+console.log(Object.values(kennan)[0]);
 
 // Keven's email
-console.log(Object.values(Keven)[2]);
+console.log(Object.values(keven)[2]);
 
 // Gannie's name
-console.log(Object.values(Gannie)[1]);
+console.log(Object.values(gannie)[1]);
 
 // Antonietta's Gender
-console.log(Object.values(Antonietta)[3]);
+console.log(Object.values(antonietta)[3]);
 
 // ==== Challenge 3: Object Methods ==== 
 // Give Kennan the ability to say "Hello, my name is Kennan!" Use the console.log provided as a hint.
 // console.log(kennan.speak());
 
+kennan.speak = function(){
+  console.log("Hello, my name is " + this.name);
+};
+
+console.log(kennan.speak());
+
 // Antonietta loves math, give her the ability to multiply two numbers together and return the product. Use the console.log provided as a hint.
 //console.log(antonietta.multiplyNums(3,4));
+antonietta.multiplyNums = function(a, b){
+  console.log(a * b);
+};
+
+console.log(antonietta.multiplyNums(3,4));
 
 // === Great work! === Head over to the the arrays.js file or take a look at the stretch challenge
 
